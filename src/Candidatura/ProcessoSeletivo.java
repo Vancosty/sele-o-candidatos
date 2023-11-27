@@ -20,7 +20,7 @@ public class ProcessoSeletivo {
             double salarioPretendido = valorPretendido();
 
             System.out.println("O candidato " + candidato + "solicitou esse salario" + salarioPretendido);
-            if(salarioBase>+salarioPretendido){
+            if(salarioBase>=salarioPretendido){
                 System.out.println("o candidato" + candidato + "foi selecionado para a vaga");
                 candidatosSelecionados++;
             }
@@ -28,7 +28,7 @@ public class ProcessoSeletivo {
 
         }
 
-    };
+    }
 
     static double valorPretendido(){
         return ThreadLocalRandom.current().nextDouble(1800, 2200);
